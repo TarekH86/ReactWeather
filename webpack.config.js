@@ -2,7 +2,21 @@ const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
 module.exports = {
-    entry: './app/app.jsx',
+    entry: [
+         'jquery/dist/jquery.min.js',
+         'foundation-sites/dist/js/foundation.min.js',
+        './app/app.jsx',
+    ],
+    externals: {
+       // "jquery": 'jQuery',
+        foundation: 'Foundation'
+    },
+   plugins: [
+    new webpack.ProvidePlugin({
+        '$': 'jquery',
+        'jQuery': 'jquery'
+    })
+        ],
     output: {
         path: __dirname,
         filename: './public/bundle.js',
@@ -26,8 +40,22 @@ module.exports = {
             {
                 test: /\.(jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                loader: 'babel-loader'
 
+            },
+            { 
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader",
+                        options:{
+                            modules: true
+                        }
+                    }
+                ]
             }
         ]
     },
