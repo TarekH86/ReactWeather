@@ -7,9 +7,13 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Nav />
-                <h2>Main Component</h2>
-                {this.props.children}
+                 <Nav />
+                <div className="row">
+                    <div className="columns medium-6 small-centered">
+                        {this.props.children}
+                    </div>
+                </div>
+                
             </div>
         );
     }

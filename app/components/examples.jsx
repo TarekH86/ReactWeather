@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router';
 
 class Examples extends Component {
 
     render() {
         return (
             <div>
-            <h3>Examples Component</h3>
-            <p>Welcome to examples Component</p>
+            <h1 className="text-cente">Examples Component</h1>
+            <p>Here are few example locations to try out:</p>
+            <ol>
+                <li>
+                <Link to="/?location=Paris">Paris</Link>
+                </li>
+                <li>
+                <Link to="/?location=Rio">Rio</Link>
+                </li>
+            </ol>
+
             </div>
         );
     }
