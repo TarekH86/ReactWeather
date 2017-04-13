@@ -6,7 +6,7 @@ class WeatherMessage extends Component{
     render(){
         const { temp, location } = this.props;
         return(
-          <p>It's {temp} in { location }</p>
+          <h3 className="text-cente">It's {temp} in { location }</h3>
         );
     }
 }

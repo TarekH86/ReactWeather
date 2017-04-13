@@ -27,7 +27,7 @@ class Weather extends Component {
     renderMessage = () => {
         const { isLoading, location, temp } = this.state;
         if (isLoading) {
-            return <h3>Fetching weather...</h3>;
+            return <h3 className="text-center">Fetching weather...</h3>;
         } else if (typeof temp !== 'undefined' && typeof loaction !== 'undfined') {
             return <WeatherMessage temp={temp} location={location} />;
         }
@@ -36,6 +36,7 @@ class Weather extends Component {
     render() {
         return (
             <div>
+                <h1 className="text-center">Get Weather</h1>
                 <WeatherForm onSearch={this.handleSearch} />
                 {this.renderMessage()}
             </div>
