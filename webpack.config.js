@@ -30,6 +30,7 @@ module.exports = {
            WeatherForm: path.resolve(__dirname, 'app/components/weather-form.jsx'),
            WeatherMessage: path.resolve(__dirname, 'app/components/weather-message.jsx'),
            openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
+           ErrorModal: path.resolve(__dirname, 'app/components/error-modal.jsx'),
         },
         extensions: [".js", ".jsx"] // to enables users to leave off the extension when importing
     },
