@@ -6,7 +6,7 @@ class Examples extends Component {
     render() {
         return (
             <div>
-            <h1 className="text-cente">Examples Component</h1>
+            <h1 className="text-cente">Examples</h1>
             <p>Here are few example locations to try out:</p>
             <ol>
                 <li>
