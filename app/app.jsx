@@ -13,7 +13,8 @@ import Examples from 'Examples';
 // import 'script!foundation-sites'
 // load foundation
 require('foundation-sites/dist/css/foundation.min.css');
-
+import APP_CSS from 'APP_CSS';
+ 
 
 ReactDOM.render(
     
