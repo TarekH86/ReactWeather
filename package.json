@@ -27,6 +27,9 @@
     "jquery": "^2.2.1",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3"
   }
 }

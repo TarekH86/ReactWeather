@@ -1,5 +1,6 @@
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [
@@ -31,7 +32,7 @@ module.exports = {
             WeatherMessage: path.resolve(__dirname, 'app/components/weather-message.jsx'),
             openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
             ErrorModal: path.resolve(__dirname, 'app/components/error-modal.jsx'),
-            APP_CSS: path.resolve(__dirname,'app/styles/app.css')
+            apllicationStyle: path.resolve(__dirname, 'app/styles/app.scss')
         },
         extensions: [".js", ".jsx"] // to enables users to leave off the extension when importing
     },
@@ -54,6 +55,17 @@ module.exports = {
                         loader: "css-loader"
                     }
                 ]
+            },
+            {
+                test: /\.scss$/,
+            use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "sass-loader" // compiles Sass to CSS
+            }]
+                
             }
         ]
     },
